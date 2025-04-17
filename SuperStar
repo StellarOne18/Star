@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Perfect StarSeka</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000033;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 0;
+      font-size: 3em;
+      color: #fff;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-bottom: 5px solid #fff;
+    }
+
+    .content {
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      position: relative;
+      z-index: 2;
+    }
+
+    .article {
+      margin-bottom: 30px;
+    }
+
+    .article h2 {
+      font-size: 1.8em;
+      color: #ffcc00;
+    }
+
+    .article p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .stars {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: url('https://www.transparenttextures.com/patterns/stars.png') repeat;
+      background-color: transparent;
+      z-index: 1;
+    }
+
+    /* Анимации вращения планет */
+    .planet {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-size: cover;
+      animation: rotate 20s linear infinite;
+      z-index: 0;
+      opacity: 0.8;
+    }
+
+    .planet1 {
+      top: 50px;
+      left: 20px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/300px-The_Earth_seen_from_Apollo_17.jpg');
+    }
+
+    .planet2 {
+      bottom: 150px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/320px-OSIRIS_Mars_true_color.jpg');
+      animation-duration: 30s;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Perfect Universe
+  </header>
+
+  <!-- Планеты -->
+  <div class="planet planet1"></div>
+  <div class="planet planet2"></div>
+
+  <div class="content">
+    <h1>Добро пожаловать на сайт Perfect StarSeka</h1>
+    <p>Здесь вы найдете последние новости и статьи о космосе. Мы собираем интересную информацию и делимся ею с вами.</p>
+
+    <div class="article">
+      <h2>Новости космоса</h2>
+      <p>Здесь будут опубликованы самые последние новости о космических исследованиях, открытиях и других событиях в мире астрономии.</p>
+      <a href="#">Читать подробнее...</a>
+    </div>
+
+    <div class="article">
+      <h2>Загадки Вселенной</h2>
+      <p>В этой статье мы расскажем о самых больших загадках космоса, которые до сих пор не имеют объяснений.</p>
+      <a href="#">Читать подробнее...</a>
+    </div>
+  </div>
+
+  <div class="stars"></div>
+</body>
+</html>
